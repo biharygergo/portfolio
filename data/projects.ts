@@ -7,7 +7,7 @@ export const projects: Project[] = [
       description:
         "As a sailing enthusiast, I've been developing SailLog for the past 5 years. Used by more than 2000 sailors from around the world, it's a great project to work on my free-time.",
       tags: ["hobby-project", "angular", "firebase"],
-      coverImageUrl: "/saillog-cover.jpeg",
+      coverImageUrl: "/saillog-cover",
       coverImageAlt: "Picture of a sailing boat",
       projectUrl: "https://saillogapp.com",
     },
@@ -17,7 +17,7 @@ export const projects: Project[] = [
       description:
         "When Prezi switched to all-remote due to the pandemic, I've developed this app to help us in our planning process. It's open-source and since then other teams outside of Prezi have started using it as well.",
       tags: ["hobby-project", "angular", "firebase"],
-      coverImageUrl: "/planning-cover.png",
+      coverImageUrl: "/planning-cover",
       coverImageAlt: "Illustration of poker cards",
       projectUrl: "https://planningpoker.live",
     },
@@ -28,7 +28,7 @@ export const projects: Project[] = [
       description:
         "A two-day long hackathon project where our team of two created this awesome little game. A great technical challenge with WebRTC connections and short time-limit.",
       tags: ["hackathon", "react", "node.js"],
-      coverImageUrl: "/hacktivity-cover.png",
+      coverImageUrl: "/hacktivity-cover",
       coverImageAlt: "Picture of an Activity board-game",
       projectUrl:
         "https://storage.googleapis.com/hacktivity-296321.appspot.com/index.html",
@@ -39,7 +39,7 @@ export const projects: Project[] = [
       description:
         "Another hackathon project, built for Junction 2020. Mostly working prototype with a focus on usability, animations and the overall UI.",
       tags: ["hackathon", "react", "prototype"],
-      coverImageUrl: "/vibe-cover.jpeg",
+      coverImageUrl: "/vibe-cover",
       coverImageAlt: "Picture of a phone making a video call",
       projectUrl: "https://getthevibe.today/",
     },
@@ -49,7 +49,7 @@ export const projects: Project[] = [
       description:
         "Interesting design challenge of having a scroll-snapping page with curved lines flowing through the entire page. Check it out!",
       tags: ["freelance", "next.js", "motion"],
-      coverImageUrl: "/incep-cover.png",
+      coverImageUrl: "/incep-cover",
       coverImageAlt: "Screenshot of the agency's landing page",
       projectUrl: "https://incepteam.com",
     },
@@ -60,7 +60,7 @@ export const projects: Project[] = [
       description:
         "Custom-built solution to digitalise all processes of a local sail repair shop. Interesting technical and also management challenge of delivering something from idea to production.",
       tags: ["freelance", "react", "nodejs"],
-      coverImageUrl: "/codezero-cover.jpeg",
+      coverImageUrl: "/codezero-cover",
       coverImageAlt: "Image of a sail under repar",
       projectUrl: "https://vitorlaszerviz.hu",
     },
@@ -70,7 +70,7 @@ export const projects: Project[] = [
       description:
         "Developed the front-end of a suite of applications designed to help independent contractors and their bookkeepers in their workflow.",
       tags: ["freelance", "angular", "graphql"],
-      coverImageUrl: "/proab-cover.jpeg",
+      coverImageUrl: "/proab-cover",
       coverImageAlt: "Image of the bookkeeping application's screen",
       projectUrl: "https://app.proab.hu",
     },
@@ -80,7 +80,7 @@ export const projects: Project[] = [
       description:
         "I've been contributing for the past years to the JunctionApp, which is a widely used platform to organize hackathons around the world.",
       tags: ["open-source", "react", "graphql"],
-      coverImageUrl: "junction-cover.jpeg",
+      coverImageUrl: "junction-cover",
       coverImageAlt: "Picture of the Junction hackathon",
       projectUrl: "https://app.hackjunction.com",
     },

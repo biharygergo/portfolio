@@ -32,7 +32,7 @@ export const ProjectCard = (
         subtitle={props.subtitle}
       />
       <motion.div
-        className="mt-auto mb-2 flex flex-wrap gap-2"
+        className="mt-auto mb-2 flex flex-wrap"
         layoutId={`project-tags-${props.layoutIndex}`}
       >
         {props.tags.map((tag, i) => (

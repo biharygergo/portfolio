@@ -40,7 +40,7 @@ export const ProjectModal = (
           {props.description}
         </motion.p>
         <motion.div
-          className="mt-5 mb-2 flex flex-wrap gap-2"
+          className="mt-5 mb-2 flex flex-wrap"
           layoutId={`project-tags-${props.layoutIndex}`}
         >
           {props.tags.map((tag, i) => (
