@@ -1,6 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Use this as a Template
+I've created this portfolio page with `next.js`, `Tailwind CSS` and `framer-motion`. I think it looks great and it's very simple to maintain.
 
+You can easily re-use this template to create your own portfolio page. Just fork this repository and modify the configs in `/data/index.ts`. 
 ## Getting Started
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
