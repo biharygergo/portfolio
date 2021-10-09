@@ -5,7 +5,7 @@ import { animationProps } from "./svg-animations";
 export const ArrowDown = (props: { onClick: () => void }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-10 w-10 text-gray-800 dark:text-white"
+    className="h-10 w-10 text-gray-800 dark:text-white hover:text-gray-500 dark:hover:text-gray-100 transition-colors"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
