@@ -18,10 +18,10 @@ const Home: NextPage = () => {
   return (
     <div className="bg-white dark:bg-gray-900">
       <Head>
-        <title>Gergely Bihary</title>
+        <title>Gergely Bihary | Software Engineer</title>
         <meta
           name="description"
-          content="Gergely Bihary's portfolio page - under development"
+          content="Gergely Bihary's portfolio page"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
