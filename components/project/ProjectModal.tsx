@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { Project } from "../types";
+import { Project } from "../../types";
 import { ProjectImage } from "./ProjectImage";
 import { ProjectSubtitle } from "./ProjectSubtitle";
 import { ProjectTag } from "./ProjectTag";
@@ -12,10 +12,10 @@ export const ProjectModal = (
   <div className="fixed inset-0 flex items-center justify-center">
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 0.6 }}
+      animate={{ opacity: 0.7 }}
       exit={{ opacity: 0, transition: { duration: 0.15 } }}
       transition={{ duration: 0.2 }}
-      className="absolute inset-0 bg-gray-800"
+      className="absolute inset-0 bg-gray-800 dark:bg-black"
       onClick={props.onClose}
     />
     <motion.div
