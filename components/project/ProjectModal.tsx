@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { Project } from "../types";
+import { Project } from "../../types";
 import { ProjectImage } from "./ProjectImage";
 import { ProjectSubtitle } from "./ProjectSubtitle";
 import { ProjectTag } from "./ProjectTag";
