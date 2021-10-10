@@ -2,10 +2,16 @@ import { motion } from "framer-motion";
 import React from "react";
 import { config } from "../data";
 import { ArrowDown } from "./icons/ArrowDown";
+import { DarkMode } from "./icons/DarkMode";
 import { Github } from "./icons/Github";
+import { LightMode } from "./icons/LightMode";
 import { LinkedIn } from "./icons/LinkedIn";
 
-export const IntroSection = (props: { scrollToProjects: () => void }) => (
+export const IntroSection = (props: {
+  scrollToProjects: () => void;
+  toggleDarkMode: () => void;
+  currentMode: "dark" | "light";
+}) => (
   <div className="container min-h-screen mx-auto flex flex-col justify-center items-center">
     <motion.h1
       className="text-7xl text-center dark:text-white"
@@ -16,7 +22,7 @@ export const IntroSection = (props: { scrollToProjects: () => void }) => (
       Hi there!
     </motion.h1>
     <motion.h2
-      className="mt-2 text-gray-800 dark:text-gray-100"
+      className="mt-2 text-gray-800 dark:text-gray-100 px-2"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 0.2 }}
@@ -35,6 +41,11 @@ export const IntroSection = (props: { scrollToProjects: () => void }) => (
       <ArrowDown onClick={props.scrollToProjects} />
     </div>
     <div className="absolute top-10 right-10 flex">
+      {props.currentMode === "light" ? (
+        <DarkMode onClick={props.toggleDarkMode} />
+      ) : (
+        <LightMode onClick={props.toggleDarkMode} />
+      )}
       <a
         href={config.linkedIn}
         target="_blank"

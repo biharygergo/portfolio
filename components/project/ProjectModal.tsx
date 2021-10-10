@@ -19,7 +19,7 @@ export const ProjectModal = (
       onClick={props.onClose}
     />
     <motion.div
-      className="shadow-lg rounded-md m-2 md:w-3/5 max-w-screen-lg bg-white dark:bg-gray-800 z-10"
+      className="shadow-lg rounded-md m-2 md:w-3/5 h-auto max-w-screen-lg bg-white dark:bg-gray-800 z-10 flex flex-col"
       layoutId={`project-card-container-${props.layoutIndex}`}
     >
       <ProjectImage
@@ -36,7 +36,13 @@ export const ProjectModal = (
           subtitle={props.subtitle}
         />
 
-        <motion.p className="text-base my-3 dark:text-gray-50">
+        <motion.p
+          className="text-base my-3 dark:text-gray-50"
+          initial={{ opacity: 0 }}
+          exit={{ opacity: 0}}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
           {props.description}
         </motion.p>
         <motion.div
