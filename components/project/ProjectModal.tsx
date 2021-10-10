@@ -19,8 +19,9 @@ export const ProjectModal = (
       onClick={props.onClose}
     />
     <motion.div
-      className="shadow-lg rounded-md m-2 md:w-3/5 h-auto max-w-screen-lg bg-white dark:bg-gray-800 z-10 flex flex-col"
+      className="shadow-lg rounded-md m-2 h-full md:w-3/5 max-w-screen-lg bg-white dark:bg-gray-800 z-10 flex flex-col"
       layoutId={`project-card-container-${props.layoutIndex}`}
+      style={{ maxHeight: 500 }}
     >
       <ProjectImage
         url={props.coverImageUrl}
@@ -29,7 +30,7 @@ export const ProjectModal = (
         type="modal"
       />
 
-      <div className="p-4 bg-white dark:bg-gray-800 rounded-b-md">
+      <div className="p-4 bg-white dark:bg-gray-800 rounded-b-md h-full flex flex-col flex-1 flex-shrink-0">
         <ProjectTitle layoutIndex={props.layoutIndex} title={props.title} />
         <ProjectSubtitle
           layoutIndex={props.layoutIndex}
@@ -39,7 +40,7 @@ export const ProjectModal = (
         <motion.p
           className="text-base my-3 dark:text-gray-50"
           initial={{ opacity: 0 }}
-          exit={{ opacity: 0}}
+          exit={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
@@ -53,7 +54,7 @@ export const ProjectModal = (
             <ProjectTag tag={tag} key={i} />
           ))}
         </motion.div>
-        <div className="mt-5 flex justify-end">
+        <div className="mt-auto flex justify-end">
           <button
             className="py-2 px-4 mr-2 border-2 md:hidden border-gray-800 rounded-md hover:bg-gray-800 hover:text-white transition-colors dark:text-gray-50 dark:border-white dark:hover:bg-white dark:hover:text-gray-800"
             onClick={props.onClose}

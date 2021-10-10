@@ -8,9 +8,9 @@ export const ProjectImage = (props: {
   type: "card" | "modal";
 }) => (
   <motion.div
-    className="rounded-t-md relative min-h-0 overflow-hidden"
+    className="rounded-t-md relative min-h-0 overflow-hidden flex-grow"
     layoutId={`project-card-image-${props.layoutIndex}`}
-    style={{ height: props.type === "card" ? 200 : "30%" }}
+    style={{ height: props.type === "card" ? 200 : "40%" }}
   >
     <picture>
       <source srcSet={`${props.url}.webp`} type="image/webp" />
