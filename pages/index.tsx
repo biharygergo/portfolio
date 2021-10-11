@@ -24,7 +24,7 @@ const Home: NextPage = () => {
 
   React.useEffect(() => smoothscroll.polyfill(), []);
 
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setMode("dark");
     } else {
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
   }, []);
 
   return (
-    <div className={`${mode}`}>
+    <div className={mode}>
       <Head>
         <title>{config.meta.title}</title>
         <meta name="description" content={config.meta.description} />

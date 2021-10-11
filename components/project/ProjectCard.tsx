@@ -13,10 +13,16 @@ export const ProjectCard = (
   }
 ) => (
   <motion.div
-    className={`shadow-lg rounded-md h-full flex flex-col hover:shadow-xl transition-shadow select-none ${props.layoutIndex > 3 ? 'self-start' : 'self-end'}`}
+    className={`shadow-lg rounded-md h-full flex flex-col hover:shadow-2xl dark:hover:shadow-dark cursor-pointer transition-shadow select-none focus:outline-none focus:shadow-2xl ${
+      props.layoutIndex > 3 ? "self-start" : "self-end"
+    }`}
     onClick={props.onClick}
     layoutId={`project-card-container-${props.layoutIndex}`}
     style={{ maxHeight: 400 }}
+    tabIndex={0}
+    onKeyPress={(e: React.KeyboardEvent) =>
+      e.key === "Enter" && props.onClick()
+    }
   >
     <ProjectImage
       url={props.coverImageUrl}

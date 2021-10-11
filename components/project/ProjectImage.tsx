@@ -22,6 +22,6 @@ export const ProjectImage = (props: {
         style={{ maxHeight: 300 }}
       />
     </picture>
-    <div className="bg-gradient-to-t from-white absolute inset-0 dark:from-gray-800 h-full" />
+    <div className={`bg-gradient-to-t from-white absolute inset-0 ${props.type === 'card' ? 'dark:from-gray-800' : 'dark:from-gray-700'}`} />
   </motion.div>
 );
