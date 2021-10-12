@@ -8,7 +8,7 @@ export const ProjectImage = (props: {
   type: "card" | "modal";
 }) => (
   <motion.div
-    className="rounded-t-md relative min-h-0 overflow-hidden flex-grow"
+    className="rounded-t-md relative min-h-0 overflow-hidden"
     layoutId={`project-card-image-${props.layoutIndex}`}
     style={{ height: props.type === "card" ? 200 : "40%" }}
   >
