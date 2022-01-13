@@ -41,7 +41,7 @@ export const projects: Project[] = [
     tags: ["hackathon", "react", "prototype"],
     coverImageUrl: "/vibe-cover",
     coverImageAlt: "Picture of a phone making a video call",
-    projectUrl: "https://getthevibe.today/",
+    projectUrl: "https://junction-vibes.web.app/now",
   },
   {
     title: "IncepTech",
