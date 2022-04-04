@@ -22,6 +22,16 @@ export const projects: Project[] = [
     projectUrl: "https://planningpoker.live",
   },
   {
+    title: "20k",
+    subtitle: "Volunteer contributor for 20k - keeping the Hungarian elections clean.",
+    description: 
+      "Helped build parts of a web application to validate vote counters' identities and provide data about election issues. The stack involved Hasura over a PostgreSQL database and a React-based frontend.",
+    tags: ["volunteer", "react", "graphql"],
+    coverImageUrl: "junction-cover",
+    coverImageAlt: "The logo of the 20k organization",
+    projectUrl: "https://app.20k.hu",
+  },
+  {
     title: "Hacktivity",
     subtitle:
       "Real-time online Activity game with audio & video streaming",
