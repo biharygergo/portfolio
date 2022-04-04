@@ -49,7 +49,7 @@ export const ProjectModal = (
           />
 
           <motion.p
-            className="text-base my-3 dark:text-gray-50"
+            className="text-base my-3 dark:text-gray-50 break-words"
             initial={{ opacity: 0 }}
             exit={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -13,7 +13,7 @@ export const ProjectCard = (
   }
 ) => (
   <motion.div
-    className={`shadow-lg rounded-md h-full flex flex-col hover:shadow-2xl dark:hover:shadow-dark cursor-pointer transition-shadow select-none focus:outline-none focus:shadow-2xl ${
+    className={`shadow-lg group relative rounded-md h-full flex flex-col hover:shadow-2xl dark:hover:shadow-dark cursor-pointer transition-shadow select-none focus:outline-none focus:shadow-2xl ${
       props.layoutIndex > 3 ? "self-start" : "self-end"
     }`}
     onClick={props.onClick}
@@ -46,5 +46,15 @@ export const ProjectCard = (
         ))}
       </motion.div>
     </div>
+    <a
+      className="flex justify-center items-center absolute top-4 right-4 h-6 w-6 fill-white opacity-0 transition-all duration-300 focus:opacity-100 group-hover:opacity-100 transform hover:scale-110 bg-gray-50 hover:shadow-md rounded-full"
+      href={props.projectUrl}
+      onClick={(event) => event.stopPropagation()}
+      target="_blank"
+      rel="noreferrer"
+      aria-label="View project website"
+    >
+      ⎋
+    </a>
   </motion.div>
 );
