@@ -2,7 +2,7 @@ import { projects } from './projects';
 
 export const config = {
   name: "Gergely Bihary",
-  intro: "I am Gergely Bihary, software engineer at Prezi.",
+  intro: "I am Gergely Bihary, software engineer at Google.",
   linkedIn: "https://www.linkedin.com/in/gergely-sandor-bihary/",
   github: "https://www.github.com/biharygergo/portfolio/",
   meta: {
