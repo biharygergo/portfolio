@@ -13,9 +13,9 @@ export const projects: Project[] = [
   },
   {
     title: "Planning Poker",
-    subtitle: "Remote SCRUM planner",
+    subtitle: "SCRUM planner for remote teams - used by hundreds of companies",
     description:
-      "When Prezi switched to all-remote during to the pandemic, I developed this app to help our planning process. As it is open-source, several teams started implementing it beyond Prezi.",
+      "When Prezi switched to all-remote during to the pandemic, I developed this app to help our planning process. I invest a lot of my free time into developing it, and it's now used by more than 5000 people every month and growing rapidly.",
     tags: ["hobby-project", "angular", "firebase"],
     coverImageUrl: "/planning-cover",
     coverImageAlt: "Illustration of poker cards",
