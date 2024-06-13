@@ -2,24 +2,24 @@ import { Project } from "../types";
 
 export const projects: Project[] = [
   {
-    title: "SailLog",
-    subtitle: "Cross-platform coaching system for professional sailors",
-    description:
-      "As a sailing enthusiast, I have been developing SailLog for the past 5 years. Used by more than 2000 sailors around the world, it is a great project to work on in my free-time.",
-    tags: ["hobby-project", "angular", "firebase"],
-    coverImageUrl: "/saillog-cover",
-    coverImageAlt: "Picture of a sailing boat",
-    projectUrl: "https://saillogapp.com",
-  },
-  {
     title: "Planning Poker",
-    subtitle: "SCRUM planner for remote teams - used by hundreds of companies",
+    subtitle: "SCRUM planner for remote teams - used by thousands of companies",
     description:
-      "When Prezi switched to all-remote during to the pandemic, I developed this app to help our planning process. I invest a lot of my free time into developing it, and it's now used by more than 5000 people every month and growing rapidly.",
+      "When Prezi switched to all-remote during to the pandemic, I developed this app to help our planning process. I invest a lot of my free time into developing it, and it's now used by more than 15000 people every month and growing rapidly.",
     tags: ["hobby-project", "angular", "firebase"],
     coverImageUrl: "/planning-cover",
     coverImageAlt: "Illustration of poker cards",
     projectUrl: "https://planningpoker.live",
+  },
+   {
+    title: "SailLog",
+    subtitle: "Cross-platform coaching system for professional sailors",
+    description:
+      "As a sailing enthusiast, I have been developing SailLog for the past 5 years. Used by more than 2000 sailors around the world, this project helped me learn a lot during my university years. I have less time for it now, so I'm slowly retiring it.",
+    tags: ["hobby-project", "angular", "firebase"],
+    coverImageUrl: "/saillog-cover",
+    coverImageAlt: "Picture of a sailing boat",
+    projectUrl: "https://dinghydock-1489916737866.web.app/",
   },
   {
     title: "20k",
