@@ -12,33 +12,8 @@ export const WindSpotBadge = ({
   windSpeed,
   delay = 0,
 }: WindSpotBadgeProps) => {
-  const [currentSpeed, setCurrentSpeed] = React.useState<number | null>(null);
-  const [isLoading, setIsLoading] = React.useState(true);
-
-  React.useEffect(() => {
-    if (windSpeed !== undefined) {
-      setCurrentSpeed(windSpeed);
-      setIsLoading(false);
-      return;
-    }
-
-    // Fetch wind data from API
-    const fetchWindData = async () => {
-      try {
-        const response = await fetch(`/api/wind?location=${encodeURIComponent(location)}`);
-        const data = await response.json();
-        if (data.windSpeed) {
-          setCurrentSpeed(data.windSpeed);
-        }
-      } catch (error) {
-        console.error("Failed to fetch wind data:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchWindData();
-  }, [location, windSpeed]);
+  const currentSpeed = windSpeed ?? null;
+  const isLoading = windSpeed === undefined;
 
   // Calculate wind-based animation parameters
   const speed = currentSpeed ?? 0;

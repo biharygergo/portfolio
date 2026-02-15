@@ -12,6 +12,7 @@ export const IntroSection = (props: {
   scrollToProjects: () => void;
   toggleDarkMode: () => void;
   currentMode: "dark" | "light";
+  windData: Record<string, number | null>;
 }) => (
   <div className="relative container min-h-screen mx-auto flex flex-col justify-center items-center px-4">
     <div className="max-w-2xl mx-auto text-center">
@@ -59,9 +60,21 @@ export const IntroSection = (props: {
           You'll probably find me at one of these spots when it's windy
         </p>
         <div className="flex flex-wrap justify-center gap-3">
-          <WindSpotBadge location="Balaton" delay={0.25} />
-          <WindSpotBadge location="Prasonisi" delay={0.3} />
-          <WindSpotBadge location="Riva del Garda" delay={0.35} />
+          <WindSpotBadge 
+            location="Balaton" 
+            windSpeed={props.windData.Balaton ?? undefined}
+            delay={0.25} 
+          />
+          <WindSpotBadge 
+            location="Prasonisi" 
+            windSpeed={props.windData.Prasonisi ?? undefined}
+            delay={0.3} 
+          />
+          <WindSpotBadge 
+            location="Riva del Garda" 
+            windSpeed={props.windData["Riva del Garda"] ?? undefined}
+            delay={0.35} 
+          />
         </div>
       </motion.div>
     </div>
