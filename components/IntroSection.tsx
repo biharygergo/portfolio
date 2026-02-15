@@ -6,6 +6,7 @@ import { DarkMode } from "./icons/DarkMode";
 import { Github } from "./icons/Github";
 import { LightMode } from "./icons/LightMode";
 import { LinkedIn } from "./icons/LinkedIn";
+import { WindSpotBadge } from "./WindSpotBadge";
 
 export const IntroSection = (props: {
   scrollToProjects: () => void;
@@ -13,36 +14,56 @@ export const IntroSection = (props: {
   currentMode: "dark" | "light";
 }) => (
   <div className="relative container min-h-screen mx-auto flex flex-col justify-center items-center px-4">
-    <div className="max-w-4xl mx-auto text-center">
-      {/* Role Badge */}
-      <motion.div
-        className="inline-block px-4 py-2 mb-6 text-sm font-normal text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
+    <div className="max-w-2xl mx-auto text-center">
+      {/* Greeting */}
+      <motion.h1
+        className="text-4xl md:text-5xl font-normal text-gray-900 dark:text-white mb-12 tracking-tight"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        Software Engineer @ Google
-      </motion.div>
+        Hi there! 👋
+      </motion.h1>
 
-      {/* Main Heading */}
-      <motion.h1
-        className="text-4xl md:text-5xl lg:text-6xl font-medium text-gray-900 dark:text-white mb-6 tracking-tight"
+      {/* Content Section */}
+      <motion.div
+        className="space-y-6 mb-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
       >
-        Building delightful web experiences
-      </motion.h1>
+        {/* Work */}
+        <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+          At work, I'm a{" "}
+          <span className="text-gray-900 dark:text-white">
+            Growth Software Engineer at ElevenLabs
+          </span>
+        </p>
 
-      {/* Subheading */}
-      <motion.p
-        className="text-lg md:text-xl font-normal text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
+        {/* Sailing */}
+        <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+          Outside of work, I love{" "}
+          <span className="text-gray-900 dark:text-white">
+            everything with a sail
+          </span>
+        </p>
+      </motion.div>
+
+      {/* Sailing Spots Section */}
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
       >
-        {config.intro}
-      </motion.p>
+        <p className="text-sm text-gray-500 dark:text-gray-500 mb-3">
+          You'll probably find me at one of these spots when it's windy
+        </p>
+        <div className="flex flex-wrap justify-center gap-3">
+          <WindSpotBadge location="Balaton" delay={0.25} />
+          <WindSpotBadge location="Prasonisi" delay={0.3} />
+          <WindSpotBadge location="Riva del Garda" delay={0.35} />
+        </div>
+      </motion.div>
     </div>
 
     {/* Scroll Indicator */}

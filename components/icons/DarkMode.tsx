@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 import React from "react";
 import { animationProps } from "./svg-animations";
 export const DarkMode = (props: { onClick: () => void }) => (
-  <button onClick={props.onClick} title="Toggle dark mode" className="mr-2">
+  <button onClick={props.onClick} title="Toggle dark mode" className="p-2 hover:opacity-70 transition-opacity">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-6 w-6 text-gray-600 dark:text-white hover:text-gray-500 dark:hover:text-gray-100 transition-colors"
+      className="h-6 w-6 text-gray-600 dark:text-white"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
