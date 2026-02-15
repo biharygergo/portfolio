@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { animationProps } from "./svg-animations";
 
 export const LightMode = (props: { onClick: () => void }) => (

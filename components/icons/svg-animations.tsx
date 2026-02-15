@@ -13,9 +13,11 @@ const appear = {
 
 export const animationProps = {
   variants: appear,
-  initial: "hidden",
-  animate: "visible",
+  initial: "hidden" as const,
+  animate: "visible" as const,
   transition: {
-    default: { duration: 2, ease: "easeInOut", delay: 0.5 },
+    duration: 2,
+    ease: "easeInOut" as const,
+    delay: 0.5,
   },
 };
