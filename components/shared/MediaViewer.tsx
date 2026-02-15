@@ -87,6 +87,7 @@ export const MediaViewer = ({ media }: MediaViewerProps) => {
                 className="object-cover blur-3xl scale-110 opacity-60"
                 sizes="100vw"
                 priority={currentIndex === 0}
+                placeholder={typeof currentMedia.src === "object" ? "blur" : "empty"}
                 aria-hidden="true"
               />
             ) : (
@@ -122,6 +123,7 @@ export const MediaViewer = ({ media }: MediaViewerProps) => {
                   className="object-cover rounded-lg shadow-2xl"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority={currentIndex === 0}
+                  placeholder={typeof currentMedia.src === "object" ? "blur" : "empty"}
                 />
               </div>
             ) : (
