@@ -6,10 +6,10 @@ import { IntroSection } from "@/components/IntroSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
 
 interface HomeClientProps {
-  windData: Record<string, number | null>;
+  windData: Record<string, number>;
 }
 
-export function HomeClient({ windData }: HomeClientProps) {
+export function HomeClient({ windData = {} }: HomeClientProps) {
   const [mode, setMode] = React.useState<"light" | "dark">("light");
 
   const projectsRef = React.useRef<HTMLDivElement | null>(null);

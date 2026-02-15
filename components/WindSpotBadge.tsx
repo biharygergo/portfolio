@@ -12,11 +12,11 @@ export const WindSpotBadge = ({
   windSpeed,
   delay = 0,
 }: WindSpotBadgeProps) => {
-  const currentSpeed = windSpeed ?? null;
   const isLoading = windSpeed === undefined;
+  const currentSpeed = windSpeed ?? 0;
 
   // Calculate wind-based animation parameters
-  const speed = currentSpeed ?? 0;
+  const speed = currentSpeed;
   
   // Wind categories: light (0-8), moderate (8-15), strong (15+)
   const windIntensity = Math.min(speed / 25, 1); // 0 to 1 scale
@@ -89,13 +89,11 @@ export const WindSpotBadge = ({
         <span className="text-gray-700 dark:text-gray-400">
           {location}
         </span>
-        {isLoading ? (
-          <span className="text-xs text-gray-400 dark:text-gray-600">...</span>
-        ) : currentSpeed ? (
+        {!isLoading && (
           <span className="text-xs text-gray-500 dark:text-gray-500 font-normal">
             {Math.round(currentSpeed)}kts
           </span>
-        ) : null}
+        )}
       </div>
     </motion.div>
   );
