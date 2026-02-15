@@ -3,7 +3,49 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  /* Typography - Font Family */
+  --font-family-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
+
+  /* Typography - Type Scale (modular scale 1.25 - major third) */
+  --font-size-xs: 0.75rem;      /* 12px - captions, labels */
+  --font-size-sm: 0.875rem;     /* 14px - secondary text */
+  --font-size-base: 1rem;       /* 16px - body text */
+  --font-size-lg: 1.25rem;      /* 20px - large body, small headings */
+  --font-size-xl: 1.5rem;       /* 24px - section headings */
+  --font-size-2xl: 1.875rem;    /* 30px - page headings */
+  --font-size-3xl: 2.25rem;     /* 36px - hero subheading */
+  --font-size-4xl: 3rem;        /* 48px - hero heading */
+  --font-size-5xl: 3.75rem;     /* 60px - display */
+
+  /* Typography - Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+
+  /* Typography - Letter Spacing */
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+
+  /* Shadows - Minimal for flat design */
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --shadow-dark: 0 12px 20px -12px rgb(255 255 255 / 0.25);
+
+  /* Project Accent Colors */
+  --color-project-saillog: #0066FF;
+  --color-project-poker: #FF6B35;
+  --color-project-20k: #E63946;
+  --color-project-hacktivity: #2A9D8F;
+  --color-project-vibes: #E76F51;
+  --color-project-inceptech: #264653;
+  --color-project-codezero: #457B9D;
+  --color-project-proab: #F4A261;
+  --color-project-junction: #023047;
+}
+
+body {
+  font-family: var(--font-family-sans);
 }

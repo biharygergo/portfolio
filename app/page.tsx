@@ -1,14 +1,11 @@
 "use client";
 
 import React from "react";
-import { AnimatePresence, LayoutGroup } from "motion/react";
-import { config } from "@/data";
-import { ProjectModal } from "@/components/project/ProjectModal";
+import { LayoutGroup } from "motion/react";
 import { IntroSection } from "@/components/IntroSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
 
 export default function Home() {
-  const [openedId, setOpenedId] = React.useState<number | undefined>();
   const [mode, setMode] = React.useState<"light" | "dark">("light");
 
   const projectsRef = React.useRef<HTMLDivElement | null>(null);
@@ -38,16 +35,7 @@ export default function Home() {
           currentMode={mode}
           toggleDarkMode={toggleMode}
         />
-        <ProjectsSection ref={projectsRef} onProjectClick={setOpenedId} />
-        <AnimatePresence>
-          {openedId !== undefined && (
-            <ProjectModal
-              {...config.projects[openedId]}
-              layoutIndex={openedId}
-              onClose={() => setOpenedId(undefined)}
-            />
-          )}
-        </AnimatePresence>
+        <ProjectsSection ref={projectsRef} />
       </LayoutGroup>
     </main>
   );
