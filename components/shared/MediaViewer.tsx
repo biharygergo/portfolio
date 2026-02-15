@@ -67,7 +67,7 @@ export const MediaViewer = ({ media }: MediaViewerProps) => {
   };
 
   return (
-    <div className="relative h-full min-h-[400px] rounded-xl overflow-hidden">
+    <div className="relative w-full h-full min-h-[400px] rounded-xl overflow-hidden flex flex-col">
       {/* Blurred Image Background with Crossfade */}
       <div className="absolute inset-0">
         <AnimatePresence mode="sync">
@@ -97,7 +97,7 @@ export const MediaViewer = ({ media }: MediaViewerProps) => {
       </div>
 
       {/* Media Container - Full height with centered content */}
-      <div className="relative h-full flex items-center justify-center p-8 overflow-hidden">
+      <div className="relative flex-1 flex items-center justify-center p-4 md:p-8 overflow-hidden">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={currentIndex}
@@ -111,7 +111,7 @@ export const MediaViewer = ({ media }: MediaViewerProps) => {
               opacity: { duration: 0.2 },
             }}
             className={`relative w-full ${aspectRatioClass}`}
-            style={{ maxHeight: "600px" }}
+            style={{ maxHeight: "min(600px, 80vh)" }}
           >
             {currentMedia.type === "image" ? (
               <div className="relative w-full h-full">

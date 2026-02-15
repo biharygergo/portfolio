@@ -11,7 +11,7 @@ interface ProjectMetricGridProps {
 
 export const ProjectMetricGrid = ({ metrics }: ProjectMetricGridProps) => {
   return (
-    <div className="grid grid-cols-3 gap-4 mb-4">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
       {metrics.map((metric, index) => (
         <div
           key={index}

@@ -14,11 +14,11 @@ export const IntroSection = (props: {
   currentMode: "dark" | "light";
   windData: Record<string, number | null>;
 }) => (
-  <div className="relative container min-h-screen mx-auto flex flex-col justify-center items-center px-4">
+  <div className="relative container min-h-screen mx-auto flex flex-col justify-center items-center px-6">
     <div className="max-w-2xl mx-auto text-center">
       {/* Greeting */}
       <motion.h1
-        className="text-4xl md:text-5xl font-normal text-gray-900 dark:text-white mb-12 tracking-tight"
+        className="text-4xl md:text-5xl font-normal text-gray-900 dark:text-white mb-10 md:mb-12 tracking-tight"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -28,24 +28,32 @@ export const IntroSection = (props: {
 
       {/* Content Section */}
       <motion.div
-        className="space-y-6 mb-10"
+        className="mb-12 md:mb-14"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
       >
-        {/* Work */}
-        <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-          At work, I'm a{" "}
+        <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400 mb-4">
+          I'm a{" "}
           <span className="text-gray-900 dark:text-white">
             Growth Software Engineer at ElevenLabs
           </span>
         </p>
-
-        {/* Sailing */}
+        <p className="text-sm md:text-base leading-relaxed text-gray-500 dark:text-gray-500 mb-6">
+          We're building the future of AI audio—
+          <a
+            href="https://elevenlabs.io/careers"
+            target="_blank"
+            rel="noreferrer"
+            className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors underline decoration-gray-300 dark:decoration-gray-600 underline-offset-2"
+          >
+            join our rocketship
+          </a>
+        </p>
         <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-          Outside of work, I love{" "}
+          When I'm not working, I'm out{" "}
           <span className="text-gray-900 dark:text-white">
-            everything with a sail
+            sailing
           </span>
         </p>
       </motion.div>
@@ -56,10 +64,10 @@ export const IntroSection = (props: {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
       >
-        <p className="text-sm text-gray-500 dark:text-gray-500 mb-3">
-          You'll probably find me at one of these spots when it's windy
+        <p className="text-sm text-gray-500 dark:text-gray-500 mb-4">
+          Where you'll find me on windy days
         </p>
-        <div className="flex flex-wrap justify-center gap-3">
+        <div className="flex flex-wrap justify-center gap-2.5 md:gap-3">
           <WindSpotBadge 
             location="Balaton" 
             windSpeed={props.windData.Balaton ?? undefined}

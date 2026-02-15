@@ -17,7 +17,9 @@ export const ProjectLayout = ({ children, mediaElement }: ProjectLayoutProps) =>
         <div className="order-1 md:order-none">{children}</div>
 
         {/* Media Viewer - shows last on mobile, right on desktop */}
-        <div className="order-2 md:order-none">{mediaElement}</div>
+        <div className="order-2 md:order-none min-h-[400px] md:h-full md:min-h-[500px]">
+          {mediaElement}
+        </div>
       </ProjectContainer>
     );
   }
